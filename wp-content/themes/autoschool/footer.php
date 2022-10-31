@@ -75,22 +75,43 @@
                         Меню
                     </div>
 
-                    <div class="menu-scroll">
-                        <ul>
-                            <li class="menu-item first-level"><a href="/produkciya"><span class="menu-item-text">Главная</span></a>
-                            </li>
-                            <li class="menu-item first-level"><a href="/prays"><span
-                                            class="menu-item-text">Услуги</span></a></li>
-                            <li class="menu-item first-level"><a href="/fotogalereya"><span class="menu-item-text">Прайс-лист</span></a>
-                            </li>
-                            <li class="menu-item first-level"><a href="/akcii"><span class="menu-item-text">Услуги</span></a>
-                            </li>
-                            <li class="menu-item first-level"><a href="/stati"><span
-                                            class="menu-item-text">О компании</span></a></li>
-                            <li class="menu-item first-level"><a href="/stati"><span
-                                            class="menu-item-text">Контакты</span></a></li>
-                        </ul>
-                    </div>
+<!--                    <div class="menu-scroll">-->
+<!--                        <ul>-->
+<!--                            <li class="menu-item first-level"><a href="/produkciya"><span class="menu-item-text">Главная</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="menu-item first-level"><a href="/prays"><span-->
+<!--                                            class="menu-item-text">Услуги</span></a></li>-->
+<!--                            <li class="menu-item first-level"><a href="/fotogalereya"><span class="menu-item-text">Прайс-лист</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="menu-item first-level"><a href="/akcii"><span class="menu-item-text">Услуги</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="menu-item first-level"><a href="/stati"><span-->
+<!--                                            class="menu-item-text">О компании</span></a></li>-->
+<!--                            <li class="menu-item first-level"><a href="/stati"><span-->
+<!--                                            class="menu-item-text">Контакты</span></a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+
+	                <?php wp_nav_menu( [
+		                'theme_location'  => '',
+		                'menu'            => 'Footer basic menu',
+		                'container'       => 'div',
+		                'container_class' => 'menu-scroll',
+		                'container_id'    => '',
+		                'menu_class'      => 'menu-scroll',
+		                'menu_id'         => '',
+		                'echo'            => true,
+		                'fallback_cb'     => 'wp_page_menu',
+		                'before'          => '',
+		                'after'           => '',
+		                'link_before'     => '',
+		                'link_after'      => '',
+		                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+		                'depth'           => 0,
+		                'walker'          => '',
+		                'add_li_class'  => 'nav-item',
+		                'link_class'   => 'nav-link waves-effect waves-light',
+	                ] ); ?>
 
                 </div>
             </div>
@@ -105,24 +126,26 @@
                         Меню
                     </div>
 
-                    <div class="menu-scroll">
-                        <ul>
-                            <li class="menu-item first-level"><a href="/produkciya"><span class="menu-item-text">Категория (А1)</span></a>
-                            </li>
-                            <li class="menu-item first-level"><a href="/prays"><span
-                                            class="menu-item-text">Категория (А)</span></a></li>
-                            <li class="menu-item first-level"><a href="/fotogalereya"><span class="menu-item-text">Категория (B)</span></a>
-                            </li>
-                            <li class="menu-item first-level"><a href="/akcii"><span class="menu-item-text">Категория (C)</span></a>
-                            </li>
-                            <li class="menu-item first-level"><a href="/stati"><span
-                                            class="menu-item-text">Категория (D)</span></a></li>
-                            <li class="menu-item first-level"><a href="/stati"><span
-                                            class="menu-item-text">Категория (F)</span></a></li>
-                            <li class="menu-item first-level"><a href="/stati"><span
-                                            class="menu-item-text">Категория (D)</span></a></li>
-                        </ul>
-                    </div>
+	                <?php wp_nav_menu( [
+		                'theme_location'  => '',
+		                'menu'            => 'Footer services',
+		                'container'       => 'div',
+		                'container_class' => 'menu-scroll',
+		                'container_id'    => '',
+		                'menu_class'      => 'menu-scroll',
+		                'menu_id'         => '',
+		                'echo'            => true,
+		                'fallback_cb'     => 'wp_page_menu',
+		                'before'          => '',
+		                'after'           => '',
+		                'link_before'     => '',
+		                'link_after'      => '',
+		                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+		                'depth'           => 0,
+		                'walker'          => '',
+		                'add_li_class'  => 'nav-item',
+		                'link_class'   => 'nav-link waves-effect waves-light',
+	                ] ); ?>
 
                 </div>
             </div>

@@ -103,11 +103,11 @@
                         <a class="navbar-brand" href="/"><i class="fa fa-car"></i>  Автопилот 73</a>
 
                         <!-- Collapse button -->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#basicExampleNav"
-                                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                        <div class="hamburger hamburger--spin-r navbar-toggler border-0 collapsed" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="hamburger-box navbar-toggler border-0 collapsed">
+                                <div class="hamburger-inner"></div>
+                            </div>
+                        </div>
 
                         <!-- Collapsible content -->
                         <div class="collapse navbar-collapse" id="basicExampleNav">
@@ -116,7 +116,7 @@
 
                             <?php wp_nav_menu( [
 	                            'theme_location'  => '',
-	                            'menu'            => '',
+	                            'menu'            => 'Menu 1',
 	                            'container'       => '',
 	                            'container_class' => '',
 	                            'container_id'    => '',

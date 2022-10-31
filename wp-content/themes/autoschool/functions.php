@@ -154,8 +154,17 @@ function autoschool_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	if (is_page('photogallery')){
+		wp_enqueue_script( 'autoschool-fancybox', get_template_directory_uri() . '/js/fancybox.min.js', array(), _S_VERSION, true );
+		wp_enqueue_style('autoschool-fancybox-css', get_template_directory_uri() . '/css/fancybox.min.css', array(), _S_VERSION, true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'autoschool_scripts' );
+
+
+
+
 
 /**
  * Implement the Custom Header feature.

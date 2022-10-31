@@ -14,7 +14,21 @@
 $('.dropdown-primary').find('a').removeClass('nav-link');
 
 	$(document).ready(function() {
-		$('.mdb-select').material_select();
+		//$('.mdb-select').material_select();
+
+		$(".hamburger").click(function() {
+
+			$(this).toggleClass('is-active');
+			// if ($(this).hasClass('is-active')){
+			// 	$('.navbar').removeClass('bg_transparent').addClass('bg-light');
+			// }else{
+			// 	$('.navbar').removeClass('bg-light').addClass('bg_transparent');
+			// }
+
+		});
+
+
+
 	});
 
 }( jQuery ) );
