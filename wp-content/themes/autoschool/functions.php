@@ -146,6 +146,7 @@ add_action( 'widgets_init', 'autoschool_widgets_init' );
  * Enqueue scripts and styles.
  */
 function autoschool_scripts() {
+	wp_enqueue_script( 'wow_js', get_template_directory_uri() . '/js/modules/wow.min.js', array(), _S_VERSION, true );
 	wp_enqueue_style( 'autoschool-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'autoschool-style', 'rtl', 'replace' );
 	if (is_page(82)) {
@@ -161,6 +162,8 @@ function autoschool_scripts() {
 		wp_enqueue_script( 'autoschool-fancybox', get_template_directory_uri() . '/js/fancybox.min.js', array(), _S_VERSION, true );
 
 	}
+
+	wp_enqueue_script( 'customizer_js', get_template_directory_uri() . '/js/customizer.js', array(), _S_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'autoschool_scripts' );
 

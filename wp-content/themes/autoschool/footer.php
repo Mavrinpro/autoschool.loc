@@ -208,7 +208,6 @@
 <script type="text/javascript" src="<?php echo PATH_TO_THEME ?>js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="<?php echo PATH_TO_THEME ?>js/mdb.min.js"></script>
-<script type="text/javascript" src="<?php echo PATH_TO_THEME ?>js/customizer.js"></script>
 <!-- Your custom scripts (optional) -->
 <script type="text/javascript"></script>
 <?php wp_footer(); ?>
