@@ -42,9 +42,6 @@ get_header();
 							<input class="wm-input-default" placeholder="* Ваше имя: " type="text" size="1" maxlength="100" value="" name="d[0]" id="d[0]" required="">
 
 						</div>
-
-						<!-- Default input -->
-
 						<div class="col-lg-3 col-md-4 mb-2 mb-md-0">
 							<input class="wm-input-default" placeholder="* Телефон: " type="text" size="1" maxlength="100" value="" name="d[1]" id="d[1]" required="">
 
