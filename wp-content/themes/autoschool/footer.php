@@ -197,7 +197,6 @@
         <!--/.Content-->
     </div>
 </div>
-
 </div><!-- #page -->
 <!-- Footer -->
 <!-- jQuery -->
@@ -213,6 +212,4 @@
 <?php wp_footer(); ?>
 </body>
 </html>
-
-
 
