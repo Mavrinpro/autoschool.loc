@@ -17,7 +17,6 @@ get_header();
 
 					endwhile; // End of the loop.
 					?>
-
 				</div>
                 <?php $photo = get_field('gallery');
                 foreach ($photo as $ph){ ?>
