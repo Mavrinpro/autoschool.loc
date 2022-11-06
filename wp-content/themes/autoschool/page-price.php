@@ -1,8 +1,13 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying all pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package autoschool
  */
@@ -14,40 +19,39 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
 					<?php
 					while ( have_posts() ) :
 						the_post();
 
-						get_template_part( 'template-parts/content', get_post_type() );
+						 the_title( '<h1 class="entry-title">', '</h1>' );
+						the_post_thumbnail('', ['class' => 'img-fluid w-400']);
+						?>
+                        <table class="table table-hover mb-5">
+                            <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Наименование</th>
+                                <th scope="col">Стоимость руб.</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <?php $tablePrice = get_field('price');
+                            foreach ( $tablePrice['body'] as $price ) { ?>
+                            <tr>
+                                    <td><?php echo $price[0]['c'] ?></td>
+                                    <td><?php echo $price[1]['c'] ?></td>
+                            </tr>
+                           <?php } ?>
+
+                            </tbody>
+                        </table>
+<?php
+		the_content();
+
+
 
 					endwhile; // End of the loop.
 					?>
-                <?php if (is_single(107)){ ?>
-	                <?php $files = get_field( 'documents', 107 ); //dump($files); ?>
-                    <div class="col-md-12">
-		                <?php foreach ( $files as $key => $file ) {
-			                if ( isset( $file['url'] ) ) {
-				                if($key % 2 === 0)
-					                $wowclass =  'fadeInLeft';
-				                else
-					                $wowclass =  'fadeInRight';
-
-				                ?>
-                                <div class="doc-list-inner__icon-wrapper mb-3 shadow p-3 d-flex align-items-center wow <?php echo $wowclass ?>">
-                                    <div><i class="file-type__icon file-type__icon--pdf"></i></div>
-                                    <div><a href="<?php echo $file['url'] ?>" target="_blank" class="stretched-link font-weight-bold">
-                                         <span
-                                                 class="ml-4 d-block"><?php echo $file['title'] ?></span>
-                                        </a></div>
-
-                                </div>
-			                <?php }
-
-		                } ?>
-
-                    </div>
-                   <? } ?>
                 </div>
             </div>
         </div>
@@ -82,7 +86,6 @@ get_header();
             </div>
         </div>
     </section>
-
 <?php
 get_sidebar();
 get_footer();

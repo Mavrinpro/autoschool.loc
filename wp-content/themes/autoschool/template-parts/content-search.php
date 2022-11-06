@@ -16,25 +16,15 @@
                     <header class="entry-header">
 						<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-						<?php if ( 'post' === get_post_type() ) : ?>
-                            <div class="entry-meta">
-								<?php
-								autoschool_posted_on();
-								autoschool_posted_by();
-								?>
-                            </div><!-- .entry-meta -->
-						<?php endif; ?>
                     </header><!-- .entry-header -->
-
+                    <div class="post-thumbnail">
 					<?php autoschool_post_thumbnail(); ?>
-
+                    </div>
                     <div class="entry-summary">
 						<?php the_excerpt(); ?>
                     </div><!-- .entry-summary -->
 
-                    <footer class="entry-footer">
-						<?php autoschool_entry_footer(); ?>
-                    </footer><!-- .entry-footer -->
+
                 </article><!-- #post-<?php the_ID(); ?> -->
             </div>
         </div>

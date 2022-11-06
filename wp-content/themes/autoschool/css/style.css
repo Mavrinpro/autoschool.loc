@@ -827,7 +827,9 @@ background-color: #fafafa !important;
 @media(max-width: 767px) {
     .attachment-post-thumbnail, .post-thumbnail {
         height: auto !important;
-
+    }
+    .w-400{
+        height: auto !important;
     }
 }
 
@@ -911,5 +913,46 @@ background-color: #fafafa !important;
     bottom: 0;
     transform: rotate(90deg);
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+.doc-list-inner__icon-wrapper {
+    position: relative;
+
+}
+.file-type {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
 
 
+.file-type__icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url(/wp-content/themes/autoschool/img/svg/docs.svg) 0 -84px no-repeat;
+    float: left;
+}
+.file-type__icon--pdf {
+    background-position: 0 0;
+}
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+.doc-list-inner__icon-wrapper{
+    transition: .3s;
+}
+.doc-list-inner__icon-wrapper:hover{
+    box-shadow: 0 0rem 0.5rem rgba(0,0,0,.15)!important; !important;
+}
+img.w-400{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
