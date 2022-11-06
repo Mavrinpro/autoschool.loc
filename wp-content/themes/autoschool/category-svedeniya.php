@@ -30,8 +30,12 @@ get_header();
 				while ( have_posts() ) :
 					the_post();
 				$i++;
+					if($i % 2 === 0)
+						$wowclass =  'fadeInLeft';
+					else
+						$wowclass =  'fadeInRight';
 					?>
-					<div class="col-lg-12 fadeInLeft wow" data-wow-delay="0.<?php echo $i; ?>s">
+					<div class="col-lg-12 <?php echo $wowclass; ?> wow">
 						<a href="<?php the_permalink(); ?>" class="white">
 							<div class="a_cat">
 

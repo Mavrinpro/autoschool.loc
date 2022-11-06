@@ -246,7 +246,7 @@
 				foreach ( $block_groupp as $item ) { ?>
                     <div class="col-lg-4 col-md-6 rounded mb-3 fadeInUp wow">
                         <div class="item-outer rounded p-4 pt-5 pb-5">
-                            <a href="<?php the_permalink(); ?>"><span class="title"><span
+                            <a href="##"><span class="title"><span
                                             class="align-elem"><?php echo $item['nazvanie'] ?></span></span></a>
                             <div class="text">
                                 <div class="align-elem"><p><?php echo $item['kategorii'] ?></p></div>

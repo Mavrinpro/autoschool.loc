@@ -78,7 +78,7 @@ get_header();
                         </div>
                         <div class=" col-lg-2 col-md-3">
                             <div class="more text-center">
-                                <a data-toggle="modal" data-target="#orangeModalSubscription" href="##" class="w-100"><span class="align-elem">Записаться</span></a>
+                                <button type="submit" class="w-100"><span class="align-elem">Записаться</span></button>
                             </div>
                         </div>
                     </div>
