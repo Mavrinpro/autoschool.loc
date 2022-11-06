@@ -162,6 +162,12 @@ function autoschool_scripts() {
 		wp_enqueue_script( 'autoschool-fancybox', get_template_directory_uri() . '/js/fancybox.min.js', array(), _S_VERSION, true );
 
 	}
+	if (is_page(74)){
+		wp_enqueue_script( 'autoschool-apimap', get_template_directory_uri() . '/js/modules/apimap.js', array(), _S_VERSION, true );
+		wp_enqueue_script( 'autoschool-map', get_template_directory_uri() . '/js/modules/map.js', array(), _S_VERSION, true );
+
+	}
+
 
 	wp_enqueue_script( 'customizer_js', get_template_directory_uri() . '/js/customizer.js', array(), _S_VERSION, true );
 }

@@ -1,6 +1,15 @@
 <?php
 /**
-page contacts
+ * The template for displaying all pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package autoschool
  */
 
 get_header();
@@ -24,17 +33,7 @@ get_header();
 
 					endwhile; // End of the loop.
 					?>
-                    <p>Наш адрес: <span id="adress"><?php echo get_field('settings', 72 )['adress'] ?></span></p>
-                    <p>Телефон: <span id="phone"><?php echo get_field('settings', 72 )['phone'] ?></span></p>
-                    <?php $schedule =  explode(',',get_field('settings', 72 )['grafik']); ?>
-                    <p class="m-0">Расписание:</p>
-                    <p class="m-0"><?php echo $schedule[0] ?></p>
-                    <p class="m-0"> <?php echo $schedule[1] ?></p>
-                    <p class="m-0"> <?php echo $schedule[2] ?></p>
-                </div>
-                <div class="col-12 text-center"><h2>Мы на карте</h2></div>
-                <div class="col-12">
-                    <div id="map" style="width: 100%; height: 400px">
+
                 </div>
             </div>
         </div>
