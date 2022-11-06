@@ -26,10 +26,12 @@ get_header();
 				</div>
 				<?php
 				/* Start the Loop */
+                $i = 0;
 				while ( have_posts() ) :
 					the_post();
+				$i++;
 					?>
-					<div class="col-lg-12">
+					<div class="col-lg-12 fadeInLeft wow" data-wow-delay="0.<?php echo $i; ?>s">
 						<a href="<?php the_permalink(); ?>" class="white">
 							<div class="a_cat">
 

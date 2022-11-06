@@ -33,7 +33,7 @@ get_header();
                         <a href="<?php the_permalink(); ?>" class="white">
                             <div class="a_cat">
                                 <div class="cat_photo text-center">
-                                    <img src="<?php echo the_post_thumbnail_url(); ?>" alt="" class="img-fluid">
+                                    <img src="<?php echo the_post_thumbnail_url(); ?>" alt="" class="img-fluid bounceIn wow">
                                 </div>
                                 <div class="a_footer p-3 bg_wawe"><span class="white-text text text--u-ie67xv03d"><?php the_title(); ?></span>
                                 </div>

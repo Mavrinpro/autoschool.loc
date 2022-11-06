@@ -78,7 +78,7 @@
 						?>
 
 
-                        <div class="col-lg-4 col-md-6 rounded mb-3">
+                        <div class="col-lg-4 col-md-6 rounded mb-3 fadeInUp wow">
                             <div class="item-outer rounded p-5">
                                 <a href="<?php the_permalink(); ?>"><span class="title"><span
                                                 class="align-elem"><?php the_title() ?></span></span></a>
@@ -130,7 +130,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-outer">
                         <div class="item s3-animator-zoomIn s3-animator-d2 s3-animator" data-s3-animator="zoomIn d2">
-                            <div class="image"><span class="img-convert img-contain"><img
+                            <div class="image bounceIn wow"><span class="img-convert img-contain"><img
                                             src="https://wm-3728501.oml.ru/d/svg_image_6.svg" alt="Профессионализм"
                                             style="max-width: 100%; max-height: 100%;"></span>
                                 <div class="image-inner"></div>
@@ -146,7 +146,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-outer">
                         <div class="item s3-animator-zoomIn s3-animator-d2 s3-animator" data-s3-animator="zoomIn d2">
-                            <div class="image"><span class="img-convert img-contain"><img
+                            <div class="image bounceIn wow"><span class="img-convert img-contain"><img
                                             src="https://wm-3728501.oml.ru/d/svg_image_7.svg" alt="Собственный автодром"
                                             style="max-width: 100%; max-height: 100%;"></span>
                                 <div class="image-inner"></div>
@@ -162,7 +162,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-outer">
                         <div class="item s3-animator-zoomIn s3-animator-d2 s3-animator" data-s3-animator="zoomIn d2">
-                            <div class="image"><span class="img-convert img-contain"><img
+                            <div class="image bounceIn wow"><span class="img-convert img-contain"><img
                                             src="https://wm-3728501.oml.ru/d/svg_image_8.svg" alt="Удобный график"
                                             style="max-width: 100%; max-height: 100%;"></span>
                                 <div class="image-inner"></div>
@@ -178,7 +178,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-outer">
                         <div class="item s3-animator-zoomIn s3-animator-d2 s3-animator" data-s3-animator="zoomIn d2">
-                            <div class="image"><span class="img-convert img-contain"><img
+                            <div class="image bounceIn wow"><span class="img-convert img-contain"><img
                                             src="https://wm-3728501.oml.ru/d/svg_image_9.svg"
                                             alt="Безопасные автомобили"
                                             style="max-width: 100%; max-height: 100%;"></span>
@@ -195,7 +195,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-outer">
                         <div class="item s3-animator-zoomIn s3-animator-d2 s3-animator" data-s3-animator="zoomIn d2">
-                            <div class="image"><span class="img-convert img-contain"><img
+                            <div class="image bounceIn wow"><span class="img-convert img-contain"><img
                                             src="https://wm-3728501.oml.ru/d/svg_image_10.svg" alt="Стоимость обучения"
                                             style="max-width: 100%; max-height: 100%;"></span>
                                 <div class="image-inner"></div>
@@ -210,7 +210,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="item-outer">
                         <div class="item s3-animator-zoomIn s3-animator-d2 s3-animator" data-s3-animator="zoomIn d2">
-                            <div class="image"><span class="img-convert img-contain"><img
+                            <div class="image bounceIn wow"><span class="img-convert img-contain"><img
                                             src="https://wm-3728501.oml.ru/d/svg_image_11.svg" alt="Комфорт"
                                             style="max-width: 100%; max-height: 100%;"></span>
                                 <div class="image-inner"></div>
@@ -244,7 +244,7 @@
 				<?php
 				$block_groupp = get_field( 'groupp', 72 );
 				foreach ( $block_groupp as $item ) { ?>
-                    <div class="col-lg-4 col-md-6 rounded mb-3">
+                    <div class="col-lg-4 col-md-6 rounded mb-3 fadeInUp wow">
                         <div class="item-outer rounded p-4 pt-5 pb-5">
                             <a href="<?php the_permalink(); ?>"><span class="title"><span
                                             class="align-elem"><?php echo $item['nazvanie'] ?></span></span></a>
