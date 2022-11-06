@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 mt-5 mt-md-0">
                 <div class="widget-17 popup menu-38 wm-widget-menu vertical widget-type-menu_vertical editorElement layer-type-widget"
                      data-child-icons="0">
                     <div class="menu-title">
@@ -74,23 +74,6 @@
                     <div class="menu-button">
                         Меню
                     </div>
-
-<!--                    <div class="menu-scroll">-->
-<!--                        <ul>-->
-<!--                            <li class="menu-item first-level"><a href="/produkciya"><span class="menu-item-text">Главная</span></a>-->
-<!--                            </li>-->
-<!--                            <li class="menu-item first-level"><a href="/prays"><span-->
-<!--                                            class="menu-item-text">Услуги</span></a></li>-->
-<!--                            <li class="menu-item first-level"><a href="/fotogalereya"><span class="menu-item-text">Прайс-лист</span></a>-->
-<!--                            </li>-->
-<!--                            <li class="menu-item first-level"><a href="/akcii"><span class="menu-item-text">Услуги</span></a>-->
-<!--                            </li>-->
-<!--                            <li class="menu-item first-level"><a href="/stati"><span-->
-<!--                                            class="menu-item-text">О компании</span></a></li>-->
-<!--                            <li class="menu-item first-level"><a href="/stati"><span-->
-<!--                                            class="menu-item-text">Контакты</span></a></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
 
 	                <?php wp_nav_menu( [
 		                'theme_location'  => '',

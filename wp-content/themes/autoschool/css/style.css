@@ -836,7 +836,9 @@ background-color: #fafafa !important;
 @media(max-width: 450px) {
     .category_blocks .description, .bg_section .description, .about_home .title, .send_order .form__header, .footer .title {
         font-size: 30px !important;
-
+    }
+    .address-34 .title .align-elem, .phones-35 .title .align-elem{
+        font-size: 20px;
     }
 }
 

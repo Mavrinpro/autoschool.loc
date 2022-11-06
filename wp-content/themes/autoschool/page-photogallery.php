@@ -19,12 +19,16 @@ get_header();
 					?>
 				</div>
                 <?php $photo = get_field('gallery');
-                foreach ($photo as $ph){ ?>
+                foreach ($photo as $ph){
+                    if (isset($ph['url'])){
+                    ?>
                     <div class="col-4 mb-0 p-md-2 p-1">
+                        <div class="page-gallery">
                         <a href="<?php echo $ph['url']; ?>" data-fancybox="gallery">
-                            <img src="<?php echo $ph['url']; ?>" alt=""></a>
+                            <img src="<?php echo $ph['url']; ?>" alt="photo" class="img-fluid photogallery"></a>
+                        </div>
                     </div>
-                <?php } ?>
+                <?php } } ?>
 			</div>
 		</div>
 	</section>
