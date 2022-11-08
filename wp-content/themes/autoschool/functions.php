@@ -276,3 +276,78 @@ add_filter( 'nav_menu_submenu_css_class', 'my_nav_menu_submenu_css_class' );
 add_filter( 'get_the_archive_title', function( $title ){
 	return preg_replace('~^[^:]+: ~', '', $title );
 });
+
+
+// Send form
+add_action( 'wp_ajax_send_form', 'send_form' );
+add_action( 'wp_ajax_nopriv_send_form', 'send_form' );
+function send_form() {
+	$name          = sanitize_text_field( $_POST['name'] );
+	$phone         = sanitize_text_field( $_POST['phone'] );
+	$agent         = $_SERVER['HTTP_USER_AGENT'];
+	$ip            = $_SERVER['REMOTE_ADDR'];
+	$arr           = [];
+	$flag          = 0;
+	$form_position = $_POST['form_position'];
+	$pattern_phone = '/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/';
+	//global $comment;
+
+
+		if ( empty( $name ) ) {
+		$flag        = 1;
+	}
+		if ( empty( $phone ) ) {
+			$flag = 1;
+		}
+
+		if ( ! preg_match( $pattern_phone, $phone ) ) {
+		$flag       = 1;
+	}
+
+//	if ( empty( $name ) ) {
+//		$arr['name'] = 1;
+//		$flag        = 1;
+//	}
+//
+//	if ( empty( $phone ) ) {
+//		$arr['phone'] = 1;
+//
+//		$flag = 1;
+//	}
+//	if ( ! preg_match( $pattern_phone, $phone ) ) {
+//		$arr['phone'] = 1;
+//		$flag         = 1;
+//	}
+//	if ( empty($card) && $form_position == 'reviews' ) {
+//		$arr['card'] = 1;
+//		$flag        = 1;
+//	}
+//	if (  empty($comments) && $form_position == 'reviews' ) {
+//		$arr['comments'] = 1;
+//		$flag            = 1;
+//	}
+
+	if ( $flag == 0 ) {
+		$arr['success'] = 'Данные успешно отправлены!';
+		$arr['form_position'] = $form_position;
+
+
+		$arr = [
+			'name' => $name,
+			'phone' => $phone,
+			'ip' => $ip,
+			'iserAgent' => $agent
+		];
+
+
+
+
+
+	}
+
+	echo json_encode( $arr );
+	file_put_contents(__DIR__ . '/array.txt', json_encode($arr, JSON_UNESCAPED_UNICODE), FILE_APPEND | LOCK_EX);
+	die;
+}
+
+//-----------------

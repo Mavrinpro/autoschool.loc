@@ -62,19 +62,19 @@ get_header();
                     <!-- Material input -->
                     <div class="row justify-content-center shadow-lg p-4 p-md-5 rounded">
                         <div class="col-lg-3 col-md-4 mb-2 mb-md-0">
-                            <input class="wm-input-default" placeholder="* Ваше имя: " type="text" size="1" maxlength="100" value="" name="d[0]" id="d[0]" required="">
+                            <input class="wm-input-default" placeholder="* Ваше имя: " type="text" size="1" maxlength="100" value="" name="name" id="name" required="">
 
                         </div>
 
                         <!-- Default input -->
 
                         <div class="col-lg-3 col-md-4 mb-2 mb-md-0">
-                            <input class="wm-input-default" placeholder="* Телефон: " type="text" size="1" maxlength="100" value="" name="d[1]" id="d[1]" required="">
+                            <input class="wm-input-default" placeholder="* Телефон: " type="text" size="1" maxlength="100" value="" name="phone" id="phone" required="">
 
                         </div>
                         <div class=" col-lg-2 col-md-3">
                             <div class="more text-center">
-                                <button type="submit" class="w-100"><span class="align-elem">Записаться</span></button>
+                                <button type="submit" class="w-100 btn_submit_form" data-url="<?php echo admin_url('admin-ajax.php'); ?>"><span class="align-elem">Записаться</span></button>
                             </div>
                         </div>
                     </div>
