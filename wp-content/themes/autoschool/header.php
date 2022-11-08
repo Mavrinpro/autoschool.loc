@@ -16,7 +16,6 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design for Bootstrap</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Google Fonts Roboto -->
@@ -84,6 +83,7 @@
 
                             </div>
                             <p class="f13 max-width-250 mb-1"><?php echo get_field( 'settings', 72 )['grafik'] ?></p>
+                            <p class="f13 max-width-250 mb-1"><i class="icon_addr pr-4"></i> <?php echo get_field( 'settings', 72 )['adress'] ?></p>
                         </div>
                     </div>
                     <div class="col-md-3">
