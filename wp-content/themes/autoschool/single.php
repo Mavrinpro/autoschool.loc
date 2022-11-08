@@ -74,7 +74,7 @@ get_header();
                         </div>
                         <div class=" col-lg-2 col-md-3">
                             <div class="more text-center">
-                                <button type="submit" class="w-100 btn_submit_form" data-url="<?php echo admin_url('admin-ajax.php'); ?>"><span class="align-elem">Записаться</span></button>
+                                <button type="submit" class="w-100 btn_submit_form" data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-text_btn="Записаться"><span class="align-elem">Записаться</span></button>
                             </div>
                         </div>
                     </div>

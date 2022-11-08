@@ -294,13 +294,16 @@ function send_form() {
 
 
 		if ( empty( $name ) ) {
+			$arr['name'] = 1;
 		$flag        = 1;
 	}
 		if ( empty( $phone ) ) {
+			$arr['phone'] = 1;
 			$flag = 1;
 		}
 
 		if ( ! preg_match( $pattern_phone, $phone ) ) {
+			$arr['phone'] = 1;
 		$flag       = 1;
 	}
 
@@ -328,21 +331,18 @@ function send_form() {
 //	}
 
 	if ( $flag == 0 ) {
-		$arr['success'] = 'Данные успешно отправлены!';
-		$arr['form_position'] = $form_position;
+		//$arr['success'] = 'Данные успешно отправлены!';
+		//$arr['form_position'] = $form_position;
 
 
 		$arr = [
 			'name' => $name,
 			'phone' => $phone,
 			'ip' => $ip,
-			'iserAgent' => $agent
+			'iserAgent' => $agent,
+			'success' => true
 		];
-
-
-
-
-
+//$arr['form_position'] = 555;
 	}
 
 	echo json_encode( $arr );

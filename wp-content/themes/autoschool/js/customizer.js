@@ -63,7 +63,7 @@ $('form').not('#searchform').on('submit', function (e) {
 		inputCard = $(this).find('input[name="card"]'),
 		textArea = $(this).find('textarea[name="comment"]');
 	//console.log(id);
-	console.log(url);
+	console.log(btn_text);
 	$this = $(this).serialize();
 	$.ajax({
 		type: 'POST',
@@ -76,6 +76,7 @@ $('form').not('#searchform').on('submit', function (e) {
 			button.html('<img src="/wp-content/themes/autoschool/img/svg/loader.svg" width="25">');
 		},
 		success: function (data) {
+			console.log(data);
 			if (data.name === 1) {
 				button.html(btn_text);
 				inputName.prev('.before_error').text('Введите имя!');
@@ -84,6 +85,7 @@ $('form').not('#searchform').on('submit', function (e) {
 			else{
 				inputName.removeClass('border_err_form');
 				inputName.prev('.before_error').text('');
+				button.html(btn_text);
 			}
 			if (data.phone === 1) {
 				button.html(btn_text);
@@ -119,10 +121,41 @@ $('form').not('#searchform').on('submit', function (e) {
 				inputCard.prev('.before_error').text('');
 
 				button.text(btn_text);
-				console.log(data);
-				$('.block_success_form').addClass('fadeInLeft').css('display', 'block');
+				//console.log(data);
+				//$('.block_success_form').addClass('fadeInLeft').css('display', 'block');
+				//$('body').append().load('.././template-parts/send-modal.php');
+				$modal = '<div class="modal fade" id="sendermodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  aria-modal="true">\n' +
+					'        <div class="modal-dialog modal-notify modal-success" role="document">\n' +
+					'            <!--Content-->\n' +
+					'            <div class="modal-content">\n' +
+					'                <!--Header-->\n' +
+					'                <div class="modal-header text-center">\n' +
+					'                    <h4 class="modal-title white-text w-100 font-weight-bold">Данные отправлены</h4>\n' +
+					'                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">\n' +
+					'                        <span aria-hidden="true" class="white-text">×</span>\n' +
+					'                    </button>\n' +
+					'                </div>\n' +
+					'\n' +
+					'                <!--Body-->\n' +
+					'                <div class="modal-body">\n' +
+					'                    Благодамим Вас за обращение!\n' +
+					'                    В ближайшее время мы свяжемся с вами!.\n' +
+					'                </div>\n' +
+					'\n' +
+					'            </div>\n' +
+					'            <!--/.Content-->\n' +
+					'        </div>\n' +
+					'    </div>';
+				if ($('#sendermodal').length){
+					$('#sendermodal').modal('show');
+				}else{
+					$('body').after($modal);
+				}
+
+				$('#sendermodal').modal('show');
 				setTimeout(function () {
 					$('form').trigger("reset");
+					//$('#sendermodal').remove();
 				}, 3000)
 			}
 		},

@@ -778,7 +778,7 @@ section.footer .menu-38 .menu-scroll > ul > li.menu-item > a:hover, .title-page 
 
 .send_order input, .bg-head input, select {
     padding: 2px 25px !important;
-    border: none !important;
+    /*border: none !important;*/
     box-sizing: border-box;
     background: #fafafa;
     width: 100%;
@@ -978,4 +978,8 @@ img.w-400{
     margin-right: 0px !important;
     position: relative;
     top: 2px;
+}
+
+.border_err_form {
+    border: 1px solid red !important;
 }
