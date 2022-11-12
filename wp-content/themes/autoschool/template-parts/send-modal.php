@@ -9,7 +9,6 @@
 					<span aria-hidden="true" class="white-text">×</span>
 				</button>
 			</div>
-
 			<!--Body-->
 			<div class="modal-body">
 				Благодамим Вас за обращение!
