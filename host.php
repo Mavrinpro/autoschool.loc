@@ -14,26 +14,21 @@
 <section class="mt-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h3>Закончился оплаченный период вашего хостинга</h3>
-                <p>Для вашего сайта https://<?php echo $_SERVER['HTTP_HOST'];  ?> оплаченный период подошел к концу. необходимо продлить услугу. В случае неоплаты услуги в течение 30 дней с момента остановки, все файлы будут удалены с сервера без возможности их восстановления.</p>
-                <iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=XotmAQQaGSg.221110&" width="330" height="50" frameborder="0" allowtransparency="true" scrolling="no"></iframe>​
+            <div class="col-md-6 mb-3">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
+            <div class="col-md-6 mb-3">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
         </div>
     </div>
 </section>
-
-<!-- Optional JavaScript; choose one of the two! -->
-
-<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>-->
-
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
--->
 </body>
 </html>
